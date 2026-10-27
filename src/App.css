@@ -1,3 +1,65 @@
+#root {
+  min-height: 100svh;
+}
+
+.resume-shell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding-block: 0 2rem;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.2fr) minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 4rem);
+  flex: 1;
+  padding-block: clamp(2rem, 3vw, 5rem);
+}
+
+.resume-navigation {
+  padding-top: 1rem;
+}
+
+.resume-panel {
+  min-width: 0;
+}
+
+.resume-panel .MuiPaper-root {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .resume-navigation {
+    padding-top: 0;
+  }
+
+  .resume-navigation .MuiTimeline-root {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .resume-navigation .MuiTimelineItem-root {
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .resume-navigation .MuiTimelineConnector-root {
+    display: none;
+  }
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;
